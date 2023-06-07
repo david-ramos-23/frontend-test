@@ -1,5 +1,6 @@
 import { Inter } from 'next/font/google'
 import Provider from '@components/Provider'
+import { Navigation } from '@components/Navigation'
 import '@styles/globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -19,6 +20,7 @@ export default function RootLayout ({
       <body suppressHydrationWarning className={inter.className}>
         <Provider>
           <main className='relative flex justify-center items-center flex-col max-w-7xl mx-auto sm:px-16 px-6;'>
+            <Navigation />
             {children}
           </main>
         </Provider>
