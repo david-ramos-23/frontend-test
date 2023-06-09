@@ -37,11 +37,6 @@ You will need to install the dependencies required. I use [pnpm](https://github.
     ```
 3. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## ⚙️ Build
-
-The app is build for production and place the code into `dist` folder
-
-
 ## 🛠️ Tests
 
 ⚠️ WIP ⚠️
@@ -63,11 +58,10 @@ pnpm test
 - Tailwind CSS
 - NextAuth 🎁
 - Next.js 13 Serverless Route Handlers (Next API, Full Stack Apps) 🎁
-- Dockerized App 🎁: 
+- Dockerized App 🎁
 
 
-## 🎁 Bonus
-- Dockerized App
+## ⚙️ Build Dockerized App 🎁
 
 In order Build the image and fire up the container run the following commands at the root folder.
 
@@ -75,11 +69,6 @@ In order Build the image and fire up the container run the following commands at
 docker build . -t frontend-test
 docker run --rm -p 3000:3000 --name frontend-test frontend-test
 ```
-
-- At root build folder <code>docker-compose up</code> 
-- It would create clearcloin-api and clearcoin-web docker images, and start-up the container.
-- You can access to the application opening the following [URL](http://localhost:3001)
-
 
 ## 🤔 Improvements
 - Use CSS Modules
