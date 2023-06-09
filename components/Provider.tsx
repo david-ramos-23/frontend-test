@@ -7,10 +7,8 @@ interface ProviderProps {
   children: React.ReactNode
   session?: Session
 }
-const Provider = ({ children, session }: ProviderProps) => (
+export const Provider = ({ children, session }: ProviderProps) => (
   <SessionProvider session={session}>
     {children}
   </SessionProvider>
 )
-
-export default Provider

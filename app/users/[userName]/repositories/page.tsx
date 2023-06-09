@@ -1,4 +1,4 @@
-import { UserProfile } from '@components/UserProfile'
+import { UserProfile, UserRepositories } from '@components'
 
 export default function Repositories ({ params }: { params: { userName: string } }) {
   const { userName } = params
@@ -9,7 +9,7 @@ export default function Repositories ({ params }: { params: { userName: string }
       </section>
 
       <section className='w-full'>
-        User Repositories
+        <UserRepositories userName={userName} />
       </section>
     </>
   )
