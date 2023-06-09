@@ -1,5 +1,7 @@
 'use client'
 
+import { Error } from '@components'
+
 export default function error ({
   error,
   reset
@@ -8,8 +10,6 @@ export default function error ({
   reset?: () => void
 }) {
   return (
-    <p>
-      {error.cause === 404 ? 'User doesn\'t exists' : 'Failed to get user info'}
-    </p>
+    <Error error={error} />
   )
 }
