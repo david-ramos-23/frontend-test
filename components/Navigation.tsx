@@ -8,7 +8,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Button } from './Button'
 import { GitHub } from './Icons/GitHub'
-import { Avatar } from './Avatar'
+import { AvatarWithMargin } from './Avatar'
 import { STATUS } from '@/types/types'
 import { useInterval } from '@hooks/useInterval'
 import { useVisibility } from '@hooks/useVisibility'
@@ -30,7 +30,7 @@ export const Navigation = () => {
     return (
       <>
         {user?.name != null && user?.image != null
-          ? <Avatar alt={user?.name} src={user?.image} />
+          ? <AvatarWithMargin alt={user?.name} src={user?.image} />
           : null}
         <Button
           type='button'
