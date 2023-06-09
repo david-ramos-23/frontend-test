@@ -4,6 +4,7 @@
     "home",
     "auth",
     "components",
-    "api"
+    "api",
+    "users"
   ]
 }

@@ -3,7 +3,7 @@ import { NextResponse } from 'next/server'
 
 const GITHUB_URL = process.env.GITHUB_API_URL ?? ''
 
-export async function getUser ({ userName, authorization }: { userName: string, authorization: string }): Promise<GithubUser> {
+async function getUser ({ userName, authorization }: { userName: string, authorization: string }): Promise<GithubUser> {
   const res = await fetch(`${GITHUB_URL}/users/${userName}`, {
     headers: {
       'Content-Type': 'application/json',
