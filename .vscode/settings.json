@@ -2,6 +2,8 @@
   "typescript.tsdk": "node_modules/typescript/lib",
   "conventionalCommits.scopes": [
     "home",
-    "auth"
+    "auth",
+    "components",
+    "api"
   ]
 }
