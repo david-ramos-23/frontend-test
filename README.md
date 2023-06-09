@@ -56,6 +56,9 @@ pnpm test
 - Nextjs 13 🎁 + React + Typescript 
 - React Hooks
 - Tailwind CSS
+- ESlint
+- Husky + Lintstaged
+- Commitlint (Conventional Commits)
 - NextAuth 🎁
 - Next.js 13 Serverless Route Handlers (Next API, Full Stack Apps) 🎁
 - Dockerized App 🎁
