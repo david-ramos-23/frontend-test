@@ -29,7 +29,7 @@ export default function RootLayout ({
                 </span>
               </h1>
             </header>
-            <section className='w-full max-w-md flex flex-col justify-center items-center mt-12 mx-auto  shadow-2xl bg-white p-10 rounded-lg'>
+            <section className='w-full max-w-md flex flex-col justify-center items-center mt-12 mx-auto  sm:shadow-2xl bg-white p-8 rounded-xl'>
               <UserSearch />
               {children}
             </section>

@@ -4,11 +4,11 @@ export default function Repositories ({ params }: { params: { userName: string }
   const { userName } = params
   return (
     <>
-      <section className='w-full mt-8 mb-4'>
+      <section className='w-full mt-4'>
         <UserProfile userName={userName} />
       </section>
 
-      <section className='w-full'>
+      <section className='w-full mt-4'>
         <UserRepositories userName={userName} />
       </section>
     </>
