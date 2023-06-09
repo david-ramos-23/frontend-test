@@ -1,6 +1,5 @@
 import { Inter } from 'next/font/google'
-import Provider from '@components/Provider'
-import { Navigation } from '@components/Navigation'
+import { Provider, Navigation, UserSearch } from '@components'
 import '@styles/globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -31,6 +30,7 @@ export default function RootLayout ({
               </h1>
             </header>
             <section className='w-full max-w-md flex flex-col justify-center items-center mt-12 mx-auto  shadow-2xl bg-white p-10 rounded-lg'>
+              <UserSearch />
               {children}
             </section>
           </main>
