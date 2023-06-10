@@ -12,7 +12,11 @@
         "**/?(*.)+(spec|test).[jt]s?(x)"
       ],
       "extends": ["plugin:testing-library/react"]
-    }
+    },
+		{
+			"files": ["e2e/**/*.[jt]s?(x)"],
+			"extends" :["plugin:playwright/playwright-test"]
+		}
   ],
 	"parserOptions": {
 		"project": "./tsconfig.json"
