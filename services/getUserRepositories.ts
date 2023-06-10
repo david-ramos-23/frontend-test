@@ -1,4 +1,4 @@
-import { UserRepository } from '@/types/types'
+import { UserRepository } from '@/types'
 
 export const getUserRepositories = async (userName: string, accessToken: string): Promise<UserRepository[]> => {
   return await fetch(`/api/users/${userName}/repos`, {

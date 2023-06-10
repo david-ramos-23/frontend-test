@@ -1,4 +1,4 @@
-import type { GithubUser, User } from '@/types/types'
+import type { GithubUser, User } from '@/types'
 import { NextResponse } from 'next/server'
 
 const GITHUB_URL = process.env.GITHUB_API_URL ?? ''

@@ -1,6 +1,6 @@
 'use client'
 
-import { Error as ErrorComponent, UserCard } from '@components'
+import { Error as ErrorComponent, UserCard } from '@/components'
 import { useUser } from './hooks'
 
 interface UserProps {

@@ -2,7 +2,7 @@
 
 import { useCallback } from 'react'
 import { useRouter } from 'next/navigation'
-import { Button } from '@components'
+import { Button } from '@/components'
 import type { FormEvent } from 'react'
 
 export function UserSearch () {
