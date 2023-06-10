@@ -6,7 +6,7 @@ import { useUser } from './hooks'
 interface UserProps {
   userName: string
 }
-export async function UserProfile ({ userName }: UserProps) {
+export function UserProfile ({ userName }: UserProps) {
   const { user, error, isError, isLoading } = useUser({ userName })
 
   return (
