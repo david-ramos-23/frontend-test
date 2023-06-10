@@ -1,11 +1,11 @@
 import { UserRepository } from '@/types'
 
-export const getUserRepositories = async (userName: string, accessToken: string): Promise<UserRepository[]> => {
+export const getUserRepositories = async (userName: string, accessToken: string | undefined): Promise<UserRepository[]> => {
   return await fetch(`/api/users/${userName}/repos`, {
     cache: 'no-cache',
     headers: {
       'Content-Type': 'application/json',
-      Authorization: `Bearer ${accessToken}`
+      Authorization: accessToken !== undefined ? `Bearer ${accessToken}` : ''
     }
   })
     .then(async res => {

@@ -1,11 +1,11 @@
 import { User } from '@/types'
 
-export const getUser = async (userName: string, accessToken: string): Promise<User> => {
+export const getUser = async (userName: string, accessToken: string | undefined): Promise<User> => {
   return await fetch(`/api/users/${userName}`, {
     cache: 'no-cache',
     headers: {
       'Content-Type': 'application/json',
-      Authorization: `Bearer ${accessToken}`
+      Authorization: accessToken !== undefined ? `Bearer ${accessToken}` : ''
     }
   })
     .then(async res => {

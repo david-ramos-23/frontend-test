@@ -13,7 +13,7 @@ const initialState = {
 export const useUser = ({ userName }: { userName: string }): UserState => {
   const [state, setState] = useState<UserState>(initialState)
   const { data: session } = useSession()
-  const accessToken = session?.user?.account?.access_token ?? ''
+  const accessToken = session?.user?.account?.access_token
 
   useEffect(() => {
     getUser(userName, accessToken)
