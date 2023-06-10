@@ -8,6 +8,7 @@
     "users",
     "test",
     "types",
-    "imports"
+    "imports",
+    "e2e"
   ]
 }
