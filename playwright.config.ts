@@ -7,7 +7,7 @@ const PORT = process.env.PORT ?? 3000
 
 // Set webServer.url and use.baseURL with the location of the WebServer respecting the correct set port
 const baseURL = `http://localhost:${PORT}`
-
+const BASE_URL = process.env.PLAYWRIGHT_TEST_BASE_URL ?? baseURL
 // Reference: https://playwright.dev/docs/test-configuration
 export default defineConfig({
 
@@ -31,16 +31,18 @@ export default defineConfig({
 
   // Run your local dev server before starting the tests:
   // https://playwright.dev/docs/test-advanced#launching-a-development-web-server-during-the-tests
-  // webServer: {
-  //   command: 'npm run dev',
-  //   url: baseURL,
-  //   timeout: 120 * 1000,
-  //   reuseExistingServer: process.env.CI
-  // },
+  webServer: process.env.CI
+    ? undefined
+    : {
+        command: 'npm run dev',
+        url: BASE_URL,
+        timeout: 120 * 1000,
+        reuseExistingServer: !process.env.CI
+      },
   use: {
     // Use baseURL so to make navigations relative.
     // More information: https://playwright.dev/docs/api/class-testoptions#test-options-base-url
-    baseURL,
+    baseURL: BASE_URL,
 
     // Retry a test if its failing with enabled tracing. This allows you to analyse the DOM, console logs, network traffic etc.
     // More information: https://playwright.dev/docs/trace-viewer
