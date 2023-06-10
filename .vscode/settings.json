@@ -5,6 +5,7 @@
     "auth",
     "components",
     "api",
-    "users"
+    "users",
+    "test"
   ]
 }
