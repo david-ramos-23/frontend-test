@@ -1,6 +1,6 @@
 'use client'
 
-import { Error } from '@components'
+import { Error } from '@/components'
 
 export default function error ({
   error,

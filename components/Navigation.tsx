@@ -9,9 +9,9 @@ import Image from 'next/image'
 import { Button } from './Button'
 import { GitHub } from './Icons/GitHub'
 import { AvatarWithMargin } from './Avatar'
-import { STATUS } from '@/types/types'
-import { useInterval } from '@hooks/useInterval'
-import { useVisibility } from '@hooks/useVisibility'
+import { STATUS } from '@/types'
+import { useInterval } from '@/hooks/useInterval'
+import { useVisibility } from '@/hooks/useVisibility'
 
 export const Navigation = () => {
   const [providers, setProviders] = useState<Record<LiteralUnion<BuiltInProviderType>, ClientSafeProvider> | null>(null)

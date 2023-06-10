@@ -6,6 +6,8 @@
     "components",
     "api",
     "users",
-    "test"
+    "test",
+    "types",
+    "imports"
   ]
 }

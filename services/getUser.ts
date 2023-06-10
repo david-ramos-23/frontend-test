@@ -1,4 +1,4 @@
-import { User } from '@/types/types'
+import { User } from '@/types'
 
 export const getUser = async (userName: string, accessToken: string): Promise<User> => {
   return await fetch(`/api/users/${userName}`, {

@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/consistent-type-assertions */
-import { getUser } from '@services/getUser'
-import { User, UserState } from '@/types/types'
+import { getUser } from '@/services/getUser'
+import { User, UserState } from '@/types'
 import { useSession } from 'next-auth/react'
 import { useState, useEffect } from 'react'
 

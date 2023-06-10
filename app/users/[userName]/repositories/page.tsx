@@ -1,4 +1,4 @@
-import { UserProfile, UserRepositories } from '@components'
+import { UserProfile, UserRepositories } from '@/components'
 
 export default function Repositories ({ params }: { params: { userName: string } }) {
   const { userName } = params

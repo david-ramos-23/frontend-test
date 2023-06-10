@@ -1,5 +1,5 @@
-import { Avatar } from '@components/Avatar'
-import type { User } from '@/types/types'
+import { Avatar } from '@/components/Avatar'
+import type { User } from '@/types'
 
 export interface UserCardProps {
   user: User

@@ -1,5 +1,5 @@
-import type { UserRepositoriesState } from '@/types/types'
-import { getUserRepositories } from '@services/getUserRepositories'
+import type { UserRepositoriesState } from '@/types'
+import { getUserRepositories } from '@/services/getUserRepositories'
 import { useSession } from 'next-auth/react'
 import { useEffect, useState } from 'react'
 
