@@ -10,7 +10,7 @@ export const getUser = async (userName: string, accessToken: string | undefined)
   })
     .then(async res => {
       if (!res.ok) {
-        throw new Error(`Error HTTP: ${res.status}`, { cause: res.status })
+        throw Error(`Error HTTP: ${res.status}`, { cause: res.status })
       }
 
       return await res.json()

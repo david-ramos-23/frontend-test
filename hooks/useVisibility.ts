@@ -9,7 +9,10 @@ export function useVisibility (handler: () => void): void {
   }, [handler])
 
   useEffect(() => {
-    const visibilityHandler = () => document.visibilityState === 'visible' && handler()
+    const visibilityHandler = () => {
+      document.visibilityState === 'visible' && handler()
+    }
+
     window.addEventListener('visibilitychange', visibilityHandler, false)
     return () => window.removeEventListener('visibilitychange', visibilityHandler, false)
   }, [handler])

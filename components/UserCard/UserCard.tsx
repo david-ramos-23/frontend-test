@@ -6,8 +6,8 @@ export interface UserCardProps {
 }
 
 export function UserCard ({ user }: UserCardProps) {
-  const hasName = user.name !== null && user.name.length > 0
-  const hasBio = user.bio !== null && user.bio.length > 0
+  const hasName = user.name != null && user.name.length > 0
+  const hasBio = user.bio != null && user.bio.length > 0
 
   return (
     <article className='flex gap-4'>
