@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react'
 export const useUserRepositories = ({ userName }: { userName: string }): UserRepositoriesState => {
   const [state, setState] = useState<UserRepositoriesState>({ userRepositories: [], error: null, isError: false, isLoading: true })
   const { data: session } = useSession()
-  const accessToken = session?.user?.account?.access_token ?? ''
+  const accessToken = session?.user?.account?.access_token
 
   useEffect(() => {
     getUserRepositories(userName, accessToken)
